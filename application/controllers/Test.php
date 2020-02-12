@@ -7,5 +7,8 @@ class Test extends CI_Controller {
 	public function hello() {
 		echo "This is hello function.";
 	}
+	public function addition(){
+		echo "timeless stories";
+	}
 }
 ?>
