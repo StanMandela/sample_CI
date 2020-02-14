@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<p>CodeIgniter View Example</p>
+<p><?php  print_r($test)?></p>
 
 </body>
 
