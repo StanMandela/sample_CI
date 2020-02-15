@@ -37,11 +37,16 @@ class User_model extends CI_Model
 	}
 	public  function getDetails(){
 		$query = $this->db->get("stud");
-		$data['records'] = $query->result(); /** when data is loaded to the view its all under one array in this case $data,
-		 * so to laad individual data name them using different keys as shown such as records/testdata and they will load successfully */
-		$data['testdata'] = $query->result();
+
+		$data['records'] = $query->result();
+		 /** when data is loaded to the view its all under one array in this case $data,
+		 * so to la
+		 * ad individual data name them using different keys as shown such as records/testdata and they will load successfully
+		 */
+		$data['test'] = $query->result();
 
 		return $data;
 	}
+
 }
 

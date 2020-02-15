@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<p><?php  print_r($test)?></p>
+<p><?php  print_r($data)?></p>
 
 </body>
 
