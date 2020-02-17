@@ -9,14 +9,14 @@ class Test extends CI_Controller{
 
 	public function index() {
 
-		//$this->um->signup('34','load');
+		$this->um->signup_model('11','Daisy');
 		/**
 		this UpdateDetails function maps */
 		//$this->um->updateDetails('95','fridah');
 		//$this->um->deleteDetails('45'); /** function to delete record in the database */
-		$data=$this->um->getDetails();
+		//$data=$this->um->getDetails();
 
-		$this->load->view('test',$data);
+		//$this->load->view('test',$data);
 		//$this->load->view('test');
 	}
 
@@ -29,24 +29,16 @@ class Test extends CI_Controller{
 	}
 
 	public function signup(){
-		$this->um->signup('34','load');
+		$data=$this->um->signup_model('27','Pasto');
+		//$this->um->signup('34','Daisy');
 	}
 
 	public function getDetails(){
 
 		$data=$this->um->getDetails();
+		$this->load->view('test',$data);
 	}
 
-//	public  function model()
-//	{
-//		$this->load->model('User_model');
-//		$data = array(
-//			'email' => ‘smstan8@gmail.com’,
-//			'password' => ‘12345’,
-//			'confirm_password' => ‘12345’
-//		);
-//		$this->db->insert("stud", $data);
-//	}
 
 
 }

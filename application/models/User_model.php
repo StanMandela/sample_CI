@@ -10,7 +10,7 @@ class User_model extends CI_Model
 
 	}
 
-	public function signup($no,$name){
+	public function signup_model($no,$name){
 		$data = array(
 			'roll_no'=> $no,
 			'name'=>$name
@@ -43,7 +43,7 @@ class User_model extends CI_Model
 		 * so to la
 		 * ad individual data name them using different keys as shown such as records/testdata and they will load successfully
 		 */
-		$data['test'] = $query->result();
+		//$data['test'] = $query->result();
 
 		return $data;
 	}

@@ -2511,7 +2511,7 @@ exports = module.exports = HTMLCov;
 
 function HTMLCov(runner) {
   var jade = require('jade')
-    , file = __dirname + '/templates/coverage.jade'
+    , file = __dirname + '/template/coverage.jade'
     , str = fs.readFileSync(file, 'utf8')
     , fn = jade.compile(str, { filename: file })
     , self = this;

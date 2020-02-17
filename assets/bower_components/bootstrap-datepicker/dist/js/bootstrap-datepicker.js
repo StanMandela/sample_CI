@@ -109,7 +109,7 @@
 
 		this.picker = $(DPGlobal.template);
 
-		// Checking templates and inserting
+		// Checking template and inserting
 		if (this._check_template(this.o.templates.leftArrow)) {
 			this.picker.find('.prev').html(this.o.templates.leftArrow);
 		}

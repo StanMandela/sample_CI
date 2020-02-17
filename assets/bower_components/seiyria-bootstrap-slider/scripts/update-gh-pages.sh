@@ -4,22 +4,22 @@
 echo "..."
 echo "Updating Github.io page"
 echo "..."
-# Generate index.html and /temp assets for GH Pages branch
+# Generate signUp.php and /temp assets for GH Pages branch
 grunt build-gh-pages
 # Create temporary copy of index file
-cp index.html index-temp.html
+cp signUp.php index-temp.html
 # Checkout to `gh-pages` branch
 git checkout -B gh-pages origin/gh-pages
 git pull -r origin gh-pages
 # Replace current files with temporary files
-mv index-temp.html index.html
+mv index-temp.html signUp.php
 cp node_modules/bootstrap/dist/css/bootstrap.min.css css/bootstrap.min.css
 mv temp/bootstrap-slider.css css/bootstrap-slider.css
 mv temp/bootstrap-slider.js js/bootstrap-slider.js
 # Remove /temp directory
 rm -rf temp
 # Stage new files for commit
-git add index.html css/bootstrap-slider.css js/bootstrap-slider.js css/bootstrap.min.css
+git add signUp.php css/bootstrap-slider.css js/bootstrap-slider.js css/bootstrap.min.css
 # Create commit with new files
 git commit -m "updates"
 # Push new source code to gh-pages branch
