@@ -40,14 +40,14 @@ class User_model extends CI_Model
 		$this->db->from('signup_table');
 		$this->db->where('email',$email);
 		$result =$this->db->get()->row();
-		print_r($result);
+		//print_r($result);
 		if(empty($result)){
 			$data = array(
 				'email'=> $email,
-				'password'=>$password,
+				'password'=>password_hash("$password", PASSWORD_DEFAULT)
 				//'confirm_password'=>$confirm_password
 			);
-			print_r($data);
+			//print_r($data);
 			$this->db->insert("signup_table", $data);
 			return true;
 		}else{

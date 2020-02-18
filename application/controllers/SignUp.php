@@ -21,7 +21,7 @@ class SignUp extends CI_Controller
 		$confirm_password = $this->input->post('confirm_password');
 
 		$status = $this->User_model->getDetails($email,$password,$confirm_password);
-		print_r($confirm_password);
+		//print_r($confirm_password);
 		if ($status == true) {
 			//lead to portal logged in
 
