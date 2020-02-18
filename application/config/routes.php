@@ -52,5 +52,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'test';
 $route['hello'] = 'Test/hello';
 $route['Details'] = 'Test/getDetails';
-$route['sign'] = 'signUp';
+$route['authentication'] ='SignUp/signup';
 
