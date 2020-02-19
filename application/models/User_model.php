@@ -41,7 +41,7 @@ class User_model extends CI_Model
 		$this->db->where('email',$email);
 		$result =$this->db->get()->row();
 		//print_r($result);
-		if(empty($result)){
+		if(empty($result)&&$password==$confirm_password){
 			$data = array(
 				'email'=> $email,
 				'password'=>password_hash("$password", PASSWORD_DEFAULT)

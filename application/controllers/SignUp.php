@@ -9,19 +9,28 @@ class SignUp extends CI_Controller
 		$this->load->model('user_model','um');
 	}
 	public function index() {
-
-		$this->load->view('signUp');
+		$data = array(
+			'view'=>'signUp'
+		);
+		$this->load->view('index', $data);
+	}
+	public function login() {
+		$data = array(
+			'view'=>'loggedin_page'
+		);
+		$this->load->view('index', $data);
 	}
 	public function signup(){
 //		$data=$this->um->signup_model('27','Pasto');
 //		//$this->um->signup('34','Daisy');
 
 		$email = $this->input->post('email');
+		//$email = 'ss@gma.com';
 		$password = $this->input->post('password');
 		$confirm_password = $this->input->post('confirm_password');
 
 		$status = $this->User_model->getDetails($email,$password,$confirm_password);
-		//print_r($confirm_password);
+		//print_r($status);
 		if ($status == true) {
 			//lead to portal logged in
 
@@ -35,10 +44,11 @@ class SignUp extends CI_Controller
 			//lead to log in page showing error message
 			$message = 'Log in failed!! Incorrect username or password';
 			$data = array(
-				'message' => $message
+				'message' => $message,
+				'view'=>'signUp'
 			);
 			#var_dump($email);
-		//	$this->load->view('signUp', $data);
+		$this->load->view('index', $data);
 		}
 
 

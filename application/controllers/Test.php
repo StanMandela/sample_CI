@@ -9,7 +9,7 @@ class Test extends CI_Controller{
 
 	public function index() {
 
-		$this->um->signup_model('11','Daisy');
+		//$this->um->signup_model('11','Daisy');
 		/**
 		this UpdateDetails function maps */
 		//$this->um->updateDetails('95','fridah');

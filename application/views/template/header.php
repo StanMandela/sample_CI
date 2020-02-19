@@ -10,7 +10,7 @@
 	<meta name="keywords" content="Colorlib Templates">
 
 	<!-- Title Page-->
-	<title>Register Forms</title>
+	<title>Registration Form</title>
 
 	<!-- Icons font CSS-->
 	<link href="<?php echo base_url();?>assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
