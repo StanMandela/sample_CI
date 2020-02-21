@@ -25,7 +25,7 @@ class SignUp extends CI_Controller
 //		//$this->um->signup('34','Daisy');
 
 		$email = $this->input->post('email');
-		//$email = 'ss@gma.com';
+		$email = 'ss@gma.com';
 		$password = $this->input->post('password');
 		$confirm_password = $this->input->post('confirm_password');
 
@@ -48,7 +48,7 @@ class SignUp extends CI_Controller
 				'view'=>'signUp'
 			);
 			#var_dump($email);
-		$this->load->view('index', $data);
+		$this->load->view('', $data);
 		}
 
 
